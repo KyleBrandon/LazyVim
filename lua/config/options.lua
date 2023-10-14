@@ -43,7 +43,6 @@ opt.listchars = { tab = "»·", trail = "·", nbsp = "␣" } -- set invisible ch
 
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.scrolloff = 8 -- set a scroll offset of 8 lines
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 -- opt.highlight.CopilotSuggestion(guifg=#555555 ctermfg=8)
