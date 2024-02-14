@@ -14,6 +14,9 @@ return {
             }
             keys[#keys + 1] = { "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", desc = "Go to implementation" }
             keys[#keys + 1] = { "<leader>ca", "<cmd>Lspsaga code_action<CR>", desc = "See available code actions" }
+            keys[#keys + 1] = { "<leader>cr", "<cmd>RustRunnables<CR>", desc = "Code Action (Rust)" }
+            keys[#keys + 1] = { "<leader>cd", "<cmd>RustDebuggables<CR>", desc = "Code Debuggables (Rust)" }
+
             keys[#keys + 1] = { "<leader>rn", "<cmd>Lspsaga rename<CR>", desc = "Smart rename" }
             keys[#keys + 1] = {
                 "<leader>D",
@@ -28,7 +31,6 @@ return {
                 { "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", desc = "Jump to next diagnostic in buffer" }
             keys[#keys + 1] =
                 { "K", "<cmd>Lspsaga hover_doc<CR>", desc = "Show documentation for what is under cursor" }
-            keys[#keys + 1] = { "<leader>o", "<cmd>Lspsaga outline<CR>", desc = "See outline on right hand side" }
             keys[#keys + 1] = { "<leader>rs", ":LspRestart<CR>", desc = "Restart LSP" }
         end,
     },

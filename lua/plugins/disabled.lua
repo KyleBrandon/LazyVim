@@ -4,6 +4,7 @@ return {
     { "flash.nvim", enabled = false },
     { "indent-blankline.nvim", enabled = false },
     { "mini.ai", enabled = false },
+    { "mini.pairs", enabled = false },
     { "mini.indentscope", enabled = false },
     { "neo-tree.nvim", enabled = false },
     { "noice.nvim", enabled = false },
@@ -12,5 +13,4 @@ return {
     { "mini.surround", enabled = false },
     { "nvim-spectre", enabled = false },
     { "vim-startuptime", enabled = false },
-    { "which-key.nvim", enabled = false },
 }

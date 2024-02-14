@@ -4,7 +4,7 @@
 --
 local keymap = vim.keymap -- for conciseness
 
-keymap.set("n", "<leader>x", ":!chmod +x %<CR>")
+keymap.set("n", "<leader>ex", ":!chmod +x %<CR>")
 -- keymap.set("n", "<C-f>", ":silent !tmux neww tmux-sessionizer<CR>")
 keymap.set("n", "<leader>r", ":redo<CR>")
 
@@ -51,3 +51,39 @@ keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { silent = true })
 keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", { silent = true })
 keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", { silent = true })
 keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { silent = true })
+
+-- ChatGPT
+keymap.set("n", "<leader>pc", ":ChatGPT<CR>", { desc = "ChatGPT Query" })
+keymap.set("n", "<leader>pe", ":ChatGPTEditWithInstruction<CR>", { desc = "Edit with Instruction" })
+keymap.set("n", "<leader>pf", ":ChatGPTRun fix_bugs<CR>", { desc = "Fix Bugs" })
+keymap.set("n", "<leader>pr", ":ChatGPTRun code_readbility_analysis<CR>", { desc = "Code Readability Analysis" })
+keymap.set("n", "<leader>ps", ":ChatGPTRun summarize<CR>", { desc = "Summrize" })
+keymap.set("n", "<leader>px", ":ChatGPTRun explain_code<CR>", { desc = "Explain Code" })
+
+-- Obsidian
+keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>", { desc = "Open loc list of references to current buffer" })
+keymap.set("n", "<leader>of", ":ObsidianFollowLink<CR>", { desc = "Follow the link under cursor" })
+keymap.set("v", "<leader>ok", ":ObsidianLink<CR>", { desc = "Link the selected text" })
+keymap.set("v", "<leader>ol", ":ObsidianLinkNew<CR>", { desc = "Link a new note of the selected text" })
+keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Open new note" })
+keymap.set("n", "<leader>os", ":ObsidianSearch<CR>", { desc = "Searh Obsidian" })
+keymap.set("n", "<leader>ot", ":ObsidianToday<CR>", { desc = "Open today's note" })
+keymap.set("n", "<leader>oy", ":ObsidianYesterday<CR>", { desc = "Open yesterday's note" })
+
+-- jump to the next item, skipping the groups
+keymap.set("n", "<leader>xn", function()
+    require("trouble").next({ skip_groups = true, jump = true })
+end, { desc = "Jump to next item" })
+-- jump to the previous item, skipping the groups
+keymap.set("n", "<leader>xp", function()
+    require("trouble").previous({ skip_groups = true, jump = true })
+end, { desc = "Jump to previous item" })
+
+-- jump to the next item, skipping the groups
+keymap.set("n", "[d", function()
+    require("trouble").next({ skip_groups = true, jump = true })
+end, { desc = "Trouble jump next" })
+-- jump to the previous item, skipping the groups
+keymap.set("n", "]d", function()
+    require("trouble").previous({ skip_groups = true, jump = true })
+end, { desc = "Trouble jump previous" })

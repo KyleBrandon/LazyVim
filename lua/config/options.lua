@@ -59,3 +59,6 @@ opt.iskeyword:append("-") -- consider string-string as whole word
 -- Decrease update time
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
+
+-- Conceallevel set for Obsidian plugin
+opt.conceallevel = 1
