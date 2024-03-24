@@ -19,18 +19,12 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
--- preserve registeer when copying over text
-keymap.set("x", "<leader>p", [["_dP]])
-
 -- System clipboard yanking
-keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-keymap.set("n", "<leadaer>Y", [["+Y]])
+-- keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+-- keymap.set("n", "<leader>Y", [["+Y]])
 
 -- format buffer
-keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
--- clear search highlights
-keymap.set("n", "<leader>nn", ":nohl<CR>")
+-- keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
