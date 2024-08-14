@@ -6,7 +6,7 @@ local keymap = vim.keymap -- for conciseness
 
 keymap.set("n", "<leader>ex", ":!chmod +x %<CR>")
 -- keymap.set("n", "<C-f>", ":silent !tmux neww tmux-sessionizer<CR>")
-keymap.set("n", "<leader>r", ":redo<CR>")
+-- keymap.set("n", "<leader>r", ":redo<CR>")
 
 -- append next line and keep cursor position
 keymap.set("n", "J", "mzJ`z")
@@ -45,6 +45,9 @@ keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { silent = true })
 keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", { silent = true })
 keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", { silent = true })
 keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { silent = true })
+
+-- Netrw
+keymap.set("n", "<leader>et", ":Vexplore<CR>")
 
 -- ChatGPT
 keymap.set("n", "<leader>pc", ":ChatGPT<CR>", { desc = "ChatGPT Query" })

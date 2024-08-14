@@ -8,6 +8,13 @@ return {
             require("telescope").load_extension("fzf")
         end,
     },
+    opts = {
+        defaults = {
+            file_ignore_patterns = {
+                "node_modules",
+            },
+        },
+    },
 
     keys = function()
         return {

@@ -4,6 +4,11 @@
 vim.cmd.filetype = "plugin on"
 vim.cmd.syntax = "on"
 
+vim.g.netrw_keepdir = 0
+vim.g.netrw_winsize = 30
+vim.g.netrw_banner = 0
+vim.g._netrw_localcopydircmd = "cp -r"
+
 local opt = vim.opt -- for conciseness
 
 opt.rtp:append("/opt/homebrew/opt/fzf")
@@ -57,8 +62,14 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.iskeyword:append("-") -- consider string-string as whole word
 
 -- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+opt.updatetime = 250
+opt.timeoutlen = 300
 
 -- Conceallevel set for Obsidian plugin
 opt.conceallevel = 1
+
+vim.filetype.add({
+    extension = {
+        ["http"] = "http",
+    },
+})

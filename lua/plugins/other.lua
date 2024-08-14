@@ -14,5 +14,4 @@ return {
         { "c-m-Right", "<cmd><C-U>TmuxNavigateRight<cr>" },
         { "c-m-\\", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
-    { "/mg979/vim-visual-multi" },
 }
