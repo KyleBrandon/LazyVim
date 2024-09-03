@@ -27,17 +27,17 @@ keymap.set("n", "N", "Nzzzv")
 -- keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- window management
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
-keymap.set("n", "<leader>so", ":only<CR>") -- close all split windows except current
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal width & height" })
+keymap.set("n", "<leader>sx", ":close<CR>", { desc = "Close current split" })
+keymap.set("n", "<leader>so", ":only<CR>", { desc = "Close all other splits" })
 
--- keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
--- keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
--- keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
--- keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
---
+keymap.set("n", "<leader>To", ":tabonly<CR>", { desc = "Close all other tabs" })
+keymap.set("n", "<leader>Tx", ":tabclose<CR>", { desc = "Close curent tab" })
+keymap.set("n", "<leader>Tn", ":tabn<CR>", { desc = "Go to next tab" })
+keymap.set("n", "<leader>Tp", ":tabp<CR>", { desc = "Go to prev tab" })
+
 -- buffer management
 keymap.set("n", "<leader><leader>", "<C-^>") -- switch between last two buffers
 
