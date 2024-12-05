@@ -5,8 +5,6 @@
 local keymap = vim.keymap -- for conciseness
 
 keymap.set("n", "<leader>ex", ":!chmod +x %<CR>")
--- keymap.set("n", "<C-f>", ":silent !tmux neww tmux-sessionizer<CR>")
--- keymap.set("n", "<leader>r", ":redo<CR>")
 
 -- append next line and keep cursor position
 keymap.set("n", "J", "mzJ`z")
@@ -18,13 +16,6 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- keep cursor position centered when searching
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
-
--- System clipboard yanking
--- keymap.set({ "n", "v" }, "<leader>y", [["+y]])
--- keymap.set("n", "<leader>Y", [["+Y]])
-
--- format buffer
--- keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
