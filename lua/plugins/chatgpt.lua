@@ -10,7 +10,7 @@ return {
         require("chatgpt").setup({
             api_key_cmd = "op read op://dev/OpenAIAPIKey/password --no-newline",
             openai_params = {
-                model = "gpt-4",
+                model = "gpt-4o",
             },
         })
     end,

@@ -41,22 +41,32 @@ keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { silent = true })
 keymap.set("n", "<leader>et", ":Vexplore<CR>")
 
 -- ChatGPT
-keymap.set("n", "<leader>pc", ":ChatGPT<CR>", { desc = "ChatGPT Query" })
-keymap.set("n", "<leader>pe", ":ChatGPTEditWithInstruction<CR>", { desc = "Edit with Instruction" })
-keymap.set("n", "<leader>pf", ":ChatGPTRun fix_bugs<CR>", { desc = "Fix Bugs" })
-keymap.set("n", "<leader>pr", ":ChatGPTRun code_readbility_analysis<CR>", { desc = "Code Readability Analysis" })
-keymap.set("n", "<leader>ps", ":ChatGPTRun summarize<CR>", { desc = "Summrize" })
-keymap.set("n", "<leader>px", ":ChatGPTRun explain_code<CR>", { desc = "Explain Code" })
+keymap.set({ "n", "v" }, "<leader>pc", ":ChatGPT<CR>", { desc = "ChatGPT Query" })
+keymap.set({ "n", "v" }, "<leader>pe", ":ChatGPTEditWithInstruction<CR>", { desc = "Edit with Instruction" })
+keymap.set({ "n", "v" }, "<leader>pf", ":ChatGPTRun fix_bugs<CR>", { desc = "Fix Bugs" })
+keymap.set(
+    { "n", "v" },
+    "<leader>pr",
+    ":ChatGPTRun code_readbility_analysis<CR>",
+    { desc = "Code Readability Analysis" }
+)
+keymap.set({ "n", "v" }, "<leader>ps", ":ChatGPTRun summarize<CR>", { desc = "Summrize" })
+keymap.set({ "n", "v" }, "<leader>px", ":ChatGPTRun explain_code<CR>", { desc = "Explain Code" })
 
 -- Obsidian
-keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>", { desc = "Open loc list of references to current buffer" })
-keymap.set("n", "<leader>of", ":ObsidianFollowLink<CR>", { desc = "Follow the link under cursor" })
+keymap.set(
+    { "n", "v" },
+    "<leader>ob",
+    ":ObsidianBacklinks<CR>",
+    { desc = "Open loc list of references to current buffer" }
+)
+keymap.set({ "n", "v" }, "<leader>of", ":ObsidianFollowLink<CR>", { desc = "Follow the link under cursor" })
 keymap.set("v", "<leader>ok", ":ObsidianLink<CR>", { desc = "Link the selected text" })
 keymap.set("v", "<leader>ol", ":ObsidianLinkNew<CR>", { desc = "Link a new note of the selected text" })
-keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Open new note" })
-keymap.set("n", "<leader>os", ":ObsidianSearch<CR>", { desc = "Searh Obsidian" })
-keymap.set("n", "<leader>ot", ":ObsidianToday<CR>", { desc = "Open today's note" })
-keymap.set("n", "<leader>oy", ":ObsidianYesterday<CR>", { desc = "Open yesterday's note" })
+keymap.set({ "n", "v" }, "<leader>on", ":ObsidianNew<CR>", { desc = "Open new note" })
+keymap.set({ "n", "v" }, "<leader>os", ":ObsidianSearch<CR>", { desc = "Searh Obsidian" })
+keymap.set({ "n", "v" }, "<leader>ot", ":ObsidianToday<CR>", { desc = "Open today's note" })
+keymap.set({ "n", "v" }, "<leader>oy", ":ObsidianYesterday<CR>", { desc = "Open yesterday's note" })
 
 -- jump to the next item, skipping the groups
 keymap.set("n", "<leader>xn", function()

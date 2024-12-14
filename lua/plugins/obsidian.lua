@@ -45,7 +45,7 @@ return {
         },
 
         daily_notes = {
-            folder = "2 Areas/Daily",
+            folder = "2 Areas/Journal",
             template = "Daily Note Template.md",
         },
 
